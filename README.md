@@ -1,10 +1,10 @@
-# IXP-BGP-Propagation-config
+# IXP Hygiene configuration suggestions
 
 
 
 [TOC]
 
-This repository is related to a security issue identified by DE-CIX.  Currently (as of 27.05.2025) the process of responsible disclosure is still in its early stages.
+This repository is related to a security issue identified by DE-CIX.
 
 This document contains suggested configurations to mitigate the problem, and IXPs are encouraged to apply these to their switches and route servers.  These configurations need to be tested in your specific environment.  If you encounter any issue, please let the authors know.
 
@@ -16,7 +16,9 @@ if you:
 - Would like to suggest a new vendor;
 - Would like to improve the solutions presented.
 
-please reach out to secretariat@euro-ix.net.
+please send a pull request. 
+
+For more information, you can reach out to secretariat@euro-ix.net.
 
 # Introduction
 
