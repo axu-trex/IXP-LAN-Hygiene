@@ -1,5 +1,4 @@
-Arista
-We still do not have configuration suggestions for Arista.
+## Arista
 
 Suggested by: DE-CIX
 ```
