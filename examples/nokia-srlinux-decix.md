@@ -1,0 +1,327 @@
+## Nokia SR Linux
+
+Suggested by: DE-CIX
+
+```
+acl {
+    acl-filter rs_protection_v4 type ipv4 {
+        entry 10 {
+            match {
+                ipv4 {
+                    source-ip {
+                        prefix 80.81.192.0/21
+                    }
+                    destination-ip {
+                        prefix 80.81.192.0/21
+                    }
+                    protocol icmp
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 30 {
+            match {
+                ipv4 {
+                    source-ip {
+                        prefix 80.81.192.0/21
+                    }
+                    destination-ip {
+                        prefix 80.81.192.0/21
+                    }
+                    protocol tcp
+                }
+                transport {
+                    source-port {
+                        value bgp
+                    }
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 31 {
+            match {
+                ipv4 {
+                    source-ip {
+                        prefix 80.81.192.0/21
+                    }
+                    destination-ip {
+                        prefix 80.81.192.0/21
+                    }
+                    protocol tcp
+                }
+                transport {
+                    destination-port {
+                        value bgp
+                    }
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 40 {
+            match {
+                ipv4 {
+                    source-ip {
+                        prefix 80.81.192.0/21
+                    }
+                    destination-ip {
+                        prefix 80.81.192.0/21
+                    }
+                    protocol udp
+                }
+                transport {
+                    source-port {
+                        value bfd
+                    }
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 41 {
+            match {
+                ipv4 {
+                    source-ip {
+                        prefix 80.81.192.0/21
+                    }
+                    destination-ip {
+                        prefix 80.81.192.0/21
+                    }
+                    protocol udp
+                }
+                transport {
+                    destination-port {
+                        value bfd
+                    }
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 50 {
+            action {
+                drop {
+                }
+            }
+        }
+    }
+    acl-filter rs_protection_v6 type ipv6 {
+        entry 10 {
+            match {
+                ipv6 {
+                    source-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    destination-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    next-header icmp6
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 11 {
+            match {
+                ipv6 {
+                    source-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    destination-ip {
+                        prefix fe80::/10
+                    }
+                    next-header icmp6
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 12 {
+            match {
+                ipv6 {
+                    source-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    destination-ip {
+                        prefix ff00::/8
+                    }
+                }
+                next-header icmp6
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 20 {
+            match {
+                ipv6 {
+                    source-ip {
+                        prefix fe80::/10
+                    }
+                    destination-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    next-header icmp6
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 21 {
+            match {
+                ipv6 {
+                    source-ip {
+                        prefix fe80::/10
+                    }
+                    destination-ip {
+                        prefix fe80::/10
+                    }
+                    next-header icmp6
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 22 {
+            match {
+                ipv6 {
+                    source-ip {
+                        prefix fe80::/10
+                    }
+                    destination-ip {
+                        prefix ff00::/8
+                    }
+                }
+                next-header icmp6
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 30 {
+            match {
+                ipv6 {
+                    source-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    destination-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    next-header tcp
+                }
+                transport {
+                    source-port {
+                        value bgp
+                    }
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 31 {
+            match {
+                ipv6 {
+                    source-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    destination-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    next-header tcp
+                }
+                transport {
+                    destination-port {
+                        value bgp
+                    }
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 40 {
+            match {
+                ipv6 {
+                    source-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    destination-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    next-header udp
+                }
+                transport {
+                    source-port {
+                        value bfd
+                    }
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 41 {
+            match {
+                ipv6 {
+                    source-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    destination-ip {
+                        prefix 2001:7f8::/64
+                    }
+                    protocol udp
+                }
+                transport {
+                    destination-port {
+                        value bfd
+                    }
+                }
+            }
+            action {
+                accept {
+                }
+            }
+        }
+        entry 50 {
+            action {
+                drop {
+                }
+            }
+        }
+    }
+    interface * {
+        output {
+            acl-filter rs_protection_v4 type ipv4 {
+            }
+            acl-filter rs_protection_v6 type ipv6 {
+            }
+        }
+    }
+}
+```
