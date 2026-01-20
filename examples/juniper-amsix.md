@@ -1,7 +1,7 @@
 ## Juniper
 
-Suggested by: Stavros Konstantaras - AMS-IX
-Verified by: 
+ - Suggested by: Stavros Konstantaras - AMS-IX
+ - Verified by: 
 
 ### STEP 1 - Define the prefix list that contains the Peering LAN IP address
 
