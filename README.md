@@ -154,12 +154,10 @@ For both scenario, ICMP/ICMPv6 **MAY** be narrowed down to types used in `ping`/
 # Vendors
 
 ## Arista
-
-[examples/arista-decix.md]
+[Arista example from DE-CIX](examples/arista-decix.md)
 
 ## Cisco
-
-[examples/cisco-decix.md]
+[Cisco example from DE-CIX](examples/cisco-decix.md)
 
 ## Extreme
 
@@ -167,7 +165,7 @@ We still have no suggestion for Extreme.
 
 ## Juniper
 
-[examples/juniper-amsix.md]
+[Juniper example from AMS-IX](examples/juniper-amsix.md)
 
 ## Mikrotik
 
@@ -175,8 +173,8 @@ We still do not have configuration suggestions for Mikrotik.
 
 ## Nokia
 
-[examples/nokia-sros-decix.md]
-[examples/nokia-srlinux-decix.md]
+[SR OS example from DE-CIX](examples/nokia-sros-decix.md)
+[SR Linux example from DE-CIX](examples/nokia-srlinux-decix.md)
 
 # Notes
 
