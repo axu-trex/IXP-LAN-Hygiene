@@ -173,8 +173,8 @@ We still do not have configuration suggestions for Mikrotik.
 
 ## Nokia
 
-[SR OS example from DE-CIX](examples/nokia-sros-decix.md)
-[SR Linux example from DE-CIX](examples/nokia-srlinux-decix.md)
+ - [SR OS example from DE-CIX](examples/nokia-sros-decix.md)
+ - [SR Linux example from DE-CIX](examples/nokia-srlinux-decix.md)
 
 # Notes
 
